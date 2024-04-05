@@ -1,0 +1,72 @@
+{
+	"info": {
+		"_postman_id": "83e722de-a387-4a01-b8d7-26fca11cf293",
+		"name": "3Shape Word Counting",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "7907503"
+	},
+	"item": [
+		{
+			"name": "Local call Word Count",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "files",
+							"contentType": "",
+							"type": "file",
+							"src": []
+						}
+					]
+				},
+				"url": {
+					"raw": "http://localhost:7071/api/WordCount",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "7071",
+					"path": [
+						"api",
+						"WordCount"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Remote Azure Word Count",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "files",
+							"type": "file",
+							"src": []
+						}
+					]
+				},
+				"url": {
+					"raw": "https://apwordfrequencycounter.azurewebsites.net/api/WordCount",
+					"protocol": "https",
+					"host": [
+						"apwordfrequencycounter",
+						"azurewebsites",
+						"net"
+					],
+					"path": [
+						"api",
+						"WordCount"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
